@@ -15,6 +15,9 @@ dblist = conn.list_database_names()
 @app.route('/ram/')
 def iram():
     return render_template('ram.html',love=dblist)
+@app.route('/angular/')
+def angular():
+    return render_template('angular.html')
 @app.route('/')
 def index():
     r=requests.get("http://api.icndb.com/jokes/random")
